@@ -5,7 +5,7 @@
 
 void squareTest(int firstNum, int secondNum)
 {
-    if(firstNum == Math.Pow(secondNum,2))
+    if (firstNum == Math.Pow(secondNum, 2))
     {
         Console.WriteLine($"Число{firstNum} является квадратом {secondNum}");
     }
@@ -18,8 +18,8 @@ void squareTest(int firstNum, int secondNum)
 Console.WriteLine("Введите первое число; ");
 int firsNumer = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите второе число; ");
-int SecondNumer= Convert.ToInt32(Console.ReadLine());
+int SecondNumer = Convert.ToInt32(Console.ReadLine());
 
-squareTest(firsNumer,SecondNumer);
+squareTest(firsNumer, SecondNumer);
 
-squareTest(SecondNumer,firsNumer);
+squareTest(SecondNumer, firsNumer);

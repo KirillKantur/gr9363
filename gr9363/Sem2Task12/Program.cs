@@ -2,13 +2,13 @@
 //Напишите программу, которая будет принимать на
 //вход два числа и выводить, является ли второе
 //число кратным первому. Если второе число
-//некратно первому, то программа выводит остаток от
-//деления
+// некратно первому, то программа выводит остаток от
+// деления
 
 Console.WriteLine("Ведите первое число:");
-int num1 = int.Parse(Console.ReadLine());
+int num1 = int.Parse(Console.ReadLine()??"0");
 Console.WriteLine("Ведите Второе число:");
-int num2 = int.Parse(Console.ReadLine());
+int num2 = int.Parse(Console.ReadLine()??"0");
 if (num2%num1==0)
 {
     Console.WriteLine("Второе число кратно первому.");
