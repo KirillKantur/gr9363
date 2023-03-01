@@ -52,7 +52,7 @@ int EvenSum(int[] arr)
     return res;
 }
 
-int[] arrTest = Gen1DArr(20,1,99);
+int[] arrTest = Gen1DArr(50,100,999);
 Print1DArr(arrTest);
 int sum = EvenSum(arrTest);
 PrintData("Сумма четных чисел массива ", sum);
