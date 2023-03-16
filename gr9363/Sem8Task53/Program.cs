@@ -1,6 +1,6 @@
-﻿// No50 Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, 
-// и возвращает значение этого элемента или же указание, что такого элемента нет.
-// Например, задан массив:
+﻿// Задача No53
+// Задайте двумерный массив. Напишите программу, 
+// которая поменяет местами первую и последнюю строку массива.
 
 //Метод Ввода
 int ReadData(string line)
@@ -9,6 +9,7 @@ int ReadData(string line)
     int number = int.Parse(Console.ReadLine() ?? "0");
     return number;
 }
+
 // Метод генерации 2Д массива
 int[,] Gen2DArr(int countRow, int countColumn, int min, int max)
 {
@@ -30,6 +31,7 @@ int[,] Gen2DArr(int countRow, int countColumn, int min, int max)
     }
     return arr;
 }
+
 //Метод печати 2Д массива
 void Print2DArr(int[,] arr)
 {
@@ -51,21 +53,22 @@ void Print2DArr(int[,] arr)
         Console.WriteLine();
     }
 }
-//Метод вывода числа массива по запросу столбца и стоки
-void findNumb(int[,] arr, int row, int column)
+
+
+void change2DArray(int[,] matr)
 {
-    if (row < arr.GetLength(0) && column < arr.GetLength(1))
+    int temp = 0;
+    for (int i = 0; i < matr.GetLength(1); i++)
     {
-        int num = arr[row, column];
-        Console.WriteLine(num);
-    }
-    else
-    {
-        Console.WriteLine("такого числа в массиве нет");
+        temp = matr[0, i];
+        matr[0, i] = matr[matr.GetLength(0) - 1, i];
+        matr[matr.GetLength(0) - 1,i] = temp;
     }
 }
-int rows = ReadData("Введите индекс строки: ");
-int colums = ReadData("Введите индекс столбца: ");
-int[,] arrTest = Gen2DArr(5, 5, 1, 10);
-Print2DArr(arrTest);
-findNumb(arrTest, rows, colums);
+
+int m = ReadData("Введите количество строк ");
+int n = ReadData("Ввведите количество столбцов ");
+int[,] testArray = Gen2DArr(m,n,1,10);
+Print2DArr(testArray);
+change2DArray(testArray);
+Print2DArr(testArray);
